@@ -156,7 +156,7 @@ export default Ember.TextField.extend({
    * @type Array
    * @default ["us", "gb"]
    */
-  preferredCountries: ['us', 'gb'],
+  preferredCountries: ['sg', 'th', 'my', 'mn', 'kz', 'us'],
 
   /**
    * Specify the format of the `number` property. Requires the utilities
