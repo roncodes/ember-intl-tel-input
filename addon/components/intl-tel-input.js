@@ -279,7 +279,7 @@ export default Ember.TextField.extend({
    */
   hasUtilsScript: Ember.computed({
     get() {
-      return (typeof intlTelInputUtils !== 'undefined');
+      return true;
     },
     set() { /* no-op */ }
   }),
