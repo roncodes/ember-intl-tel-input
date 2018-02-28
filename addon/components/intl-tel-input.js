@@ -77,12 +77,7 @@ export default Ember.TextField.extend({
      * @type Function
      * @default null
      */
-    geoIpLookup: function(callback) {
-        Ember.$.get('http://ipinfo.io', function() {}, 'jsonp').always(function(resp) {
-            var countryCode = (resp && resp.country) ? resp.country : '';
-            callback(countryCode);
-        });
-    },
+    geoIpLookup: null,
 
     /**
      * Allow users to enter national numbers (and not have to think about
@@ -310,7 +305,7 @@ export default Ember.TextField.extend({
         this.$().intlTelInput({
             formatOnInit: true,
             allowExtensions: this.get('allowExtensions'),
-            autoFormat: this.get('autoFormat'),
+            // autoFormat: this.get('autoFormat'),
             autoHideDialCode: this.get('autoHideDialCode'),
             autoPlaceholder: this.get('autoPlaceholder'),
             defaultCountry: this.get('defaultCountry'),

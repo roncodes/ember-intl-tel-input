@@ -9,11 +9,10 @@ module.exports = {
 
     var config = app.options.intlTelInput;
 
-    // if (config && true === config.includeUtilsScript) {
-    //   app.import(app.bowerDirectory + '/intl-tel-input/build/js/utils.js');
-    // }
+    if (config && true === config.includeUtilsScript) {
+      app.import(app.bowerDirectory + '/intl-tel-input/build/js/utils.js');
+    }
     
-    app.import(app.bowerDirectory + '/intl-tel-input/build/js/utils.js');
     app.import(app.bowerDirectory + '/intl-tel-input/build/js/intlTelInput.js');
     app.import(app.bowerDirectory + '/intl-tel-input/build/img/flags.png', { destDir: 'assets/images' });
     app.import(app.bowerDirectory + '/intl-tel-input/build/img/flags@2x.png', { destDir: 'assets/images' });
