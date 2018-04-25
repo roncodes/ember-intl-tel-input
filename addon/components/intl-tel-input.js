@@ -66,7 +66,7 @@ export default Ember.TextField.extend({
      * @type String
      * @default ""
      */
-    defaultCountry: 'auto',
+    defaultCountry: '',
 
     /**
      * When setting `defaultCountry` to `"auto"`, we need to use a special
@@ -308,7 +308,8 @@ export default Ember.TextField.extend({
             // autoFormat: this.get('autoFormat'),
             autoHideDialCode: this.get('autoHideDialCode'),
             autoPlaceholder: this.get('autoPlaceholder'),
-            defaultCountry: this.get('defaultCountry'),
+            // defaultCountry: this.get('defaultCountry'),
+            initialCountry: this.get('defaultCountry'),
             geoIpLookup: this.get('geoIpLookup'),
             nationalMode: this.get('nationalMode'),
             numberType: this.get('numberType'),
